@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseline Designs — Professional Websites for Small Business</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Baseline Designs - Professional Websites for Small Business">
+  <meta property="og:description" content="Custom websites for local businesses. One-time payment, no monthly fees. Mobile responsive, SEO optimized.">
+  <meta property="og:image" content="https://sales.baselinedesigns.com/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://sales.baselinedesigns.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Baseline Designs">
+  <meta name="twitter:description" content="Custom websites for local businesses. One-time payment, no monthly fees.">
+  <meta name="twitter:image" content="https://sales.baselinedesigns.com/og-image.svg">
+  <meta name="description" content="Custom websites for local businesses. One-time payment, no monthly fees. Mobile responsive, SEO optimized.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0a0a;
+      --bg-secondary: #141414;
+      --text: #fafafa;
+      --text-muted: #a1a1a1;
+      --accent: #e94560;
+      --border: #2a2a2a;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo span { color: var(--accent); }
+    
+    nav { display: flex; gap: 32px; }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+    
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #ff5a75;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--text-muted);
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 0 100px;
+      background: radial-gradient(ellipse at 20% 50%, rgba(233, 69, 96, 0.1) 0%, transparent 50%), var(--bg);
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 40px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    /* Pricing Section */
+    .pricing {
+      padding: 100px 0;
+      background: var(--bg-secondary);
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 60px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .pricing-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: var(--accent);
+      transform: scale(1.02);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    .price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .price-note {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+    .pricing-card ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .pricing-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    .pricing-card li:before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .btn-large {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+    }
+    
+    /* Demos Section */
+    .demos {
+      padding: 100px 0;
+    }
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .demo-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .demo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .demo-preview {
+      height: 180px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .demo-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .demo-card:hover .demo-preview img {
+      transform: scale(1.03);
+    }
+    .demo-info {
+      padding: 24px;
+    }
+    .demo-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .demo-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .demo-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .demo-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Features */
+    .features {
+      background: var(--bg);
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .feature {
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    .feature p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    
+    /* Contact */
+    .contact {
+      padding: 100px 0;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+    .contact h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .contact p {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+    .contact-options {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .contact-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      min-width: 280px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .contact-card:hover {
+      border-color: var(--accent);
+    }
+    .contact-card .icon {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      header { padding: 16px 0; }
+      header .container { padding: 0 16px; }
+      .logo { font-size: 1.25rem; }
+      nav { display: none; }
+      .btn { padding: 10px 16px; font-size: 0.9rem; }
+      .demos-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; }
+      .hero { padding: 120px 0 60px; }
+      .hero h1 { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#" class="logo">Baseline<span>Designs</span></a>
+      <nav>
+        <a href="#pricing">Pricing</a>
+        <a href="#demos">Examples</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://calendly.com/douglasrichman1/30min" class="btn btn-secondary" target="_blank">Book a Call</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Professional websites.<br><span>One-time payment.</span></h1>
+      <p>Custom websites for local businesses. No monthly hosting fees, no recurring charges. You own your site completely.</p>
+      <div class="hero-buttons">
+        <a href="#pricing" class="btn btn-primary">See Pricing</a>
+        <a href="#demos" class="btn btn-secondary">View Examples</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-subtitle">One-time payment. No monthly fees. Own your website forever.</p>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="price">$499</div>
+          <p class="price-note">One-time payment</p>
+          <ul>
+            <li>5 pages included</li>
+            <li>Mobile responsive</li>
+            <li>Contact form</li>
+            <li>Basic SEO setup</li>
+            <li>Google Maps integration</li>
+          </ul>
+          <a href="https://buy.stripe.com/00weVd1PR8dQ7W08cceZ201" class="btn btn-secondary btn-large" target="_blank">Get Started</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <span class="featured-badge">Most Popular</span>
+          <h3>Professional</h3>
+          <div class="price">$899</div>
+          <p class="price-note">One-time payment</p>
+          <ul>
+            <li>15 pages included</li>
+            <li>Mobile responsive</li>
+            <li>Advanced SEO setup</li>
+            <li>AI chat widget</li>
+            <li>Blog setup</li>
+            <li>Social media integration</li>
+          </ul>
+          <a href="https://buy.stripe.com/5kQ4gz3XZ65Idgk9ggeZ202" class="btn btn-primary btn-large" target="_blank">Get Started</a>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <div class="price">$1,499</div>
+          <p class="price-note">One-time payment</p>
+          <ul>
+            <li>50 pages included</li>
+            <li>Mobile responsive</li>
+            <li>Advanced SEO</li>
+            <li>Custom features</li>
+            <li>E-commerce ready</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="https://buy.stripe.com/5kQ7sL6673XA4JOeAAeZ203" class="btn btn-secondary btn-large" target="_blank">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demos" class="demos">
+    <div class="container">
+      <h2 class="section-title">Recent work</h2>
+      <p class="section-subtitle">Custom demos built for real businesses</p>
+      
+      <div class="demos-grid">
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/barbershop.jpg" alt="Shear Edge Cuts demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>Shear Edge Cuts</h4>
+            <p>Barbershop in Coral Springs, FL</p>
+            <a href="https://demo-barbershop-tau.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/hvac.jpg" alt="ClimatePro HVAC demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>ClimatePro HVAC</h4>
+            <p>Heating & cooling services</p>
+            <a href="https://test-hvac.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/landscaping.jpg" alt="TerraScape Landscaping demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>TerraScape Landscaping</h4>
+            <p>Landscape design & maintenance</p>
+            <a href="https://demo-landscaping.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/medical.jpg" alt="Medical Practice demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>Medical Practice</h4>
+            <p>Healthcare & medical services</p>
+            <a href="https://demo-medical-v2.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/electrician.jpg" alt="VoltEdge Electric demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>VoltEdge Electric</h4>
+            <p>24/7 Emergency electricians</p>
+            <a href="https://demo-electrician.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="previews/pool.jpg" alt="Pool Services demo site preview" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h4>Pool Services</h4>
+            <p>Pool cleaning & maintenance</p>
+            <a href="https://demo-pool-ivory.vercel.app" class="demo-link" target="_blank">View Demo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Why businesses choose us</h2>
+      <p class="section-subtitle">Everything included, no surprises</p>
+      
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8h-6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"/>
+              <path d="M12 12v.01"/>
+            </svg>
+          </div>
+          <h3>No Monthly Fees</h3>
+          <p>Pay once, own your website forever. No recurring hosting charges.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+              <path d="M12 18h.01"/>
+            </svg>
+          </div>
+          <h3>Mobile First</h3>
+          <p>Every site looks perfect on phones, tablets, and desktops.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Your custom site ready in 48 hours after approval.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+          </div>
+          <h3>SEO Optimized</h3>
+          <p>Built to rank in Google search results from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>Book a free consultation or send us a message</p>
+      
+      <div class="contact-options">
+        <a href="https://calendly.com/douglasrichman1/30min" class="contact-card" target="_blank">
+          <div class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+              <line x1="16" x2="16" y1="2" y2="6"/>
+              <line x1="8" x2="8" y1="2" y2="6"/>
+              <line x1="3" x2="21" y1="10" y2="10"/>
+            </svg>
+          </div>
+          <h3>Book a Call</h3>
+          <p>Schedule a free 30-minute consultation</p>
+        </a>
+
+        <a href="mailto:douglasrichman1@gmail.com" class="contact-card">
+          <div class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </div>
+          <h3>Send Email</h3>
+          <p>douglasrichman1@gmail.com</p>
+        </a>
+
+        <a href="tel:954-532-8932" class="contact-card">
+          <div class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3>Call/Text</h3>
+          <p>(954) 532-8932</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Baseline Designs. Custom websites, no monthly fees.</p>
+    </div>
+  </footer>
+</body>
+</html>
