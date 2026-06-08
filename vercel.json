@@ -2,14 +2,12 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "sales.baselinedesigns.com" }],
-      "destination": "https://sales.i8cap.com/",
+      "destination": "https://design.i8cap.com/sales",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "sales.baselinedesigns.com" }],
-      "destination": "https://sales.i8cap.com/:path*",
+      "destination": "https://design.i8cap.com/sales",
       "permanent": true
     }
   ]
